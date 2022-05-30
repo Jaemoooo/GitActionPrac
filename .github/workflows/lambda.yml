@@ -15,6 +15,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: npm install and build
         run: |
+          npm init -y
+          npm install
           npm ci
           npm run build --if-present
         env:
